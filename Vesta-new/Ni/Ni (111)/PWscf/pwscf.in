@@ -1,0 +1,44 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   6.0000000000d-05
+  forc_conv_thr =   1.0000000000d-04
+  outdir = '/tmp//'
+  prefix = 'ni_111_scf'
+  pseudo_dir = '/home/zczlx99/q-e/pseudo'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.4699723600d-02
+  ecutrho =   3.6000000000d+02
+  ecutwfc =   4.5000000000d+01
+  ibrav = 0
+  nat = 6
+  nosym = .false.
+  nspin = 2
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   2.7777777778d-01
+/
+&ELECTRONS
+  conv_thr =   1.2000000000d-09
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Ni     58.6934 ni_pbesol_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS crystal
+Ni           0.7706207987       0.1725889258       0.0833333306 
+Ni           0.7706207987       0.5059223888       0.4166666034 
+Ni           0.7706207987       0.8392555358       0.7500000004 
+Ni           0.2706206481       0.0059223726       0.4166666034 
+Ni           0.2706206481       0.3392555169       0.7500000004 
+Ni           0.2706206481       0.6725889799       0.0833333306 
+K_POINTS automatic
+13 8 6 0 0 0
+CELL_PARAMETERS angstrom
+      2.4395183950       0.0000000000       0.0000000000
+      0.0000000000       4.2253698066       0.0000000000
+      0.0000000000       0.0000000000       5.9755752861
