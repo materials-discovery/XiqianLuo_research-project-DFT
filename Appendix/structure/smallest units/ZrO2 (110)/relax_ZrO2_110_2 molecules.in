@@ -1,0 +1,57 @@
+&CONTROL
+  calculation = 'relax'
+  forc_conv_thr =  1.00000e-03
+  max_seconds   =  8.64000e+04
+  nstep  = 50
+  outdir = '/tmp//'
+  prefix = 'ZrO2_110_relax'
+  pseudo_dir = '/home/zczlx99/q-e/pseudo/DFT'
+  restart_mode  = "from_scratch"
+/
+
+&SYSTEM
+    a                         =  5.09000e+00
+    b                         =  3.59917e+00
+    c                         =  3.59917e+00
+    degauss                   =  1.00000e-02
+    ecutrho                   =  2.25000e+02
+    ecutwfc                   =  2.50000e+01
+    ibrav                     = 8
+    nat                       = 6
+    nspin                     = 2
+    ntyp                      = 2
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  2.00000e-01
+    starting_magnetization(2) =  0.00000e+00
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+&IONS
+    ion_dynamics = "bfgs"
+/
+
+&CELL
+/
+
+K_POINTS {automatic}
+ 2  3  3  0 0 0
+
+ATOMIC_SPECIES
+O      15.9994   O.pbesol-n-kjpaw_psl.0.1.UPF
+Zr     91.224   zr_pbesol_v1.uspp.F.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Zr      0.000000   0.000000   0.000000
+Zr      2.545000   1.799587   1.799587
+O       1.272500   0.000000   1.799587
+O       3.817500   0.000000   1.799587
+O       1.272500   1.799587   0.000000
+O       3.817500   1.799587   0.000000

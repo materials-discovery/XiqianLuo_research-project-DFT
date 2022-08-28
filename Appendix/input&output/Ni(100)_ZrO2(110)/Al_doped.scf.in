@@ -1,0 +1,69 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   2.3000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  outdir = '/tmp//'
+  prefix = 'Al_Ni(100)_ZrO2(110)+vacuum'
+  pseudo_dir = '/home/zczlx99/q-e/pseudo/DFT'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.4699723600d-02
+  ecutrho =   8.0000000000d+02
+  ecutwfc =   1.0000000000d+02
+  ibrav = 0
+  nat = 23
+  nosym = .false.
+  nspin = 2
+  ntyp = 4
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   2.7777777778d-01
+  starting_magnetization(3) =   1.0000000000d-01
+  starting_magnetization(4) =   4.1666666667d-01
+/
+&ELECTRONS
+  conv_thr =   1.00000000d-06
+  electron_maxstep = 500
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Al     26.981538 Al.pbesol-n-kjpaw_psl.1.0.0.UPF
+Ni     58.6934 ni_pbesol_v1.4.uspp.F.UPF
+O      15.9994 O.pbesol-n-kjpaw_psl.0.1.UPF
+Zr     91.224 zr_pbesol_v1.uspp.F.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Zr    0.474590    1.478053    1.478053
+Zr    5.536881    1.478053    1.478053
+Al    3.005736    3.267844    3.267844
+Al    8.068027    3.267844    3.267844
+ O    1.740163    1.478053    3.267844
+ O    6.802454    1.478053    3.267844
+ O    4.271308    1.478053    3.267844
+ O    1.740163    3.267844    1.478053
+ O    6.802454    3.267844    1.478053
+ O    4.271308    3.267844    1.478053
+ O    9.333600    3.267844    1.478053
+Ni    0.708605    1.542835    5.253465
+Ni    4.158605    1.542835    5.253465
+Ni    7.608605    1.542835    5.253465
+Ni    2.433605    3.267835    5.253465
+Ni    5.883605    3.267835    5.253465
+Ni    9.333605    3.267835    5.253465
+Ni    2.433605    1.542835    6.978465
+Ni    5.883605    1.542835    6.978465
+Ni    9.333605    1.542835    6.978465
+Ni    0.708605    3.267835    6.978465
+Ni    4.158605    3.267835    6.978465
+Ni    7.608605    3.267835    6.978465
+
+K_POINTS automatic
+2 2 2 0 0 0
+CELL_PARAMETERS angstrom
+        10.1245832443            0.0000000000         0.0000000000
+        0.0000000000         3.5795800686         0.0000000000
+        0.0000000000         0.0000000000         7.487171

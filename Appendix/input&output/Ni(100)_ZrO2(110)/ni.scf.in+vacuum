@@ -1,0 +1,50 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.2000000000d-04
+  forc_conv_thr =   1.0000000000d-04
+  outdir = '/tmp//'
+  prefix = 'ni_100_slab+vacuum_scf'
+  pseudo_dir = '/home/zczlx99/q-e/pseudo'
+  tprnfor = .true.
+  tstress = .true.
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   1.4699723600d-02
+  ecutrho =   3.6000000000d+02
+  ecutwfc =   4.5000000000d+01
+  ibrav = 0
+  nat = 12
+  nosym = .false.
+  nspin = 2
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'cold'
+  starting_magnetization(1) =   2.7777777778d-01
+/
+&ELECTRONS
+  conv_thr =   1.000000000d-06
+  electron_maxstep = 500
+  mixing_beta =   4.0000000000d-01
+/
+ATOMIC_SPECIES
+Ni     58.6934 ni_pbesol_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS crystal
+Ni    0.215625    0.215625    0.215625
+Ni    3.665625    0.215625    0.215625
+Ni    7.115625    0.215625    0.215625
+Ni    1.940625    1.940625    0.215625
+Ni    5.390625    1.940625    0.215625
+Ni    8.840625    1.940625    0.215625
+Ni    1.940625    0.215625    1.940625
+Ni    5.390625    0.215625    1.940625
+Ni    8.840625    0.215625    1.940625
+Ni    0.215625    1.940625    1.940625
+Ni    3.665625    1.940625    1.940625
+Ni    7.115625    1.940625    1.940625
+K_POINTS automatic
+4 4 4 0 0 0
+CELL_PARAMETERS angstrom
+       10.3500000477         0.0000000000         0.0000000000
+        0.0000000000         3.4500000477         0.0000000000
+        0.0000000000         0.0000000000         13.4500000477
